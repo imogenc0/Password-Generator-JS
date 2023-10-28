@@ -91,18 +91,6 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 // 1 user input
 function getPasswordOptions() {
-  
-
-}
-
-// Function for getting a random element from an array
-// 3 - algorithm
-function getRandom(arr) {
-
-}
-
-// Function to generate password with user input
-function generatePassword() {
   console.log("password clicked")
   // password length - runs well
   var length = prompt("Choose a number between 8 and 128 for the length of your password?")
@@ -126,6 +114,18 @@ function generatePassword() {
   var spec = confirm("Would you like you password to include special characters?")
   console.log(spec)
   // 
+
+}
+
+// Function for getting a random element from an array
+// 3 - algorithm
+function getRandom(arr) {
+
+}
+
+// Function to generate password with user input
+function generatePassword() {
+  getPasswordOptions();
 
 }
 
