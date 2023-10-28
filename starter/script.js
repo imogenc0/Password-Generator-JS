@@ -104,6 +104,7 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
   console.log("password clicked")
+  // password length - runs well
   var length = prompt("Choose a number between 8 and 128 for the length of your password?")
   console.log(length)
   if (length < 8) {
@@ -114,7 +115,18 @@ function generatePassword() {
     alert("Please choose a number between 8 and 128.")
     var length = prompt("Please choosea new character length for your password.")
     console.log(length)
-}
+  }
+  // character types - runs well
+  var lc = confirm("Would you like you password to include lowercase letters?")
+  console.log(lc)
+  var uc = confirm("Would you like you password to include uppercase letters?")
+  console.log(uc)
+  var num = confirm("Would you like you password to include numbers?")
+  console.log(num)
+  var spec = confirm("Would you like you password to include special characters?")
+  console.log(spec)
+  // 
+
 }
 
 // Get references to the #generate element
