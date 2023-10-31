@@ -3,7 +3,6 @@ var specialCharacters = [
   '@',
   '%',
   '+',
-  '\\',
   '/',
   "'",
   '!',
@@ -88,8 +87,21 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// object containing all characters
+var allCharacters = {
+  lowercase: lowerCasedCharacters,
+  uppercase: upperCasedCharacters,
+  numbers: numericCharacters,
+  special: specialCharacters
+}
+
+// testing object works
+console.log(allCharacters.lowercase);
+console.log(allCharacters.uppercase);
+console.log(allCharacters.numbers);
+console.log(allCharacters.special);
+
 // Function to prompt user for password options
-// 1 user input
 function getPasswordOptions() {
   console.log("password clicked")
   // password length - runs well
@@ -97,11 +109,11 @@ function getPasswordOptions() {
   console.log(length)
   if (length < 8) {
     alert("Please choose a number between 8 and 128.")
-    var length = prompt("Please choose a new character length for your password.")
+    var length = prompt("Please choose a new character length for your password between 8 and 128.")
     console.log(length)
   } else if (length > 128) {
     alert("Please choose a number between 8 and 128.")
-    var length = prompt("Please choosea new character length for your password.")
+    var length = prompt("Please choose a new character length for your password between 8 and 128.")
     console.log(length)
   }
   // character types - runs well
@@ -117,17 +129,59 @@ function getPasswordOptions() {
 
 }
 
+
+// ideas:
+// under each confirm - if statement 
+    // if variable = true, add to new array?
+    // then go through all of them 
+    // whatever is added to new array can be used to generate random selection from
+    // loop? for (var i = 0; i < new array.length, i++)
+    // choose (length) number of random characters and loop as many times as length
+    // print on the screen new password.
+
+
+
+// code copied from:https://www.programiz.com/javascript/examples/generate-random-strings for reference to generating random character
+
+// program to generate random strings
+// declare all characters
+      // const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+      // function generateString(length) {
+      //     let result = ' ';
+      //     const charactersLength = characters.length;
+      //     for ( let i = 0; i < length; i++ ) {
+      //         result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      //     }
+
+      //     return result;
+      // }
+
+      // console.log(generateString(5));
+
+
+
 // Function for getting a random element from an array
 // 3 - algorithm
-function getRandom(arr) {
-
+function getRandom(allCharacters) {
+  // random generator code source: https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array
+  console.log("getRandom function runs")
+  var random = random[Math.floor(Math.random()*allCharacters.length)];
+  console.log(random);
 }
 
 // Function to generate password with user input
 function generatePassword() {
   getPasswordOptions();
+  if (lc = true) + (uc = true) + (num = true) + (spec = true) 
+  {
+    console.log("all true")
+  }
 
 }
+
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
